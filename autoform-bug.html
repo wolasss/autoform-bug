@@ -1,0 +1,18 @@
+<head>
+  <title>autoform-bug</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> hello}}
+</body>
+
+<template name="hello">
+       {{> quickForm schema="Schema" id="testId" template="test"}}
+</template>
+
+<template name="test">
+        {{afFieldLabelText name=this.name}}
+          <input type="text" {{atts}} />
+</template>
